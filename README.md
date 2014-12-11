@@ -1,6 +1,8 @@
 Sample elasticsearch configuration for V&A Museum of Childhood website
 
-  mapping.js - Elasticsearch type mapping for article, event, subject, news types 
+Files
+
+  mapping.json - Elasticsearch type mapping for article, event, subject, news types 
 
 Usage (with development instance of elasticsearch running on port 9200)
 
