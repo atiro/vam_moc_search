@@ -7,6 +7,7 @@ Files
 Usage (with development instance of elasticsearch running on port 9200)
 
   # Create Index
+
   curl -XPUT 'localhost:9200/vam_moc?pretty'
 
   # Add mappings 
