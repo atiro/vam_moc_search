@@ -1,0 +1,341 @@
+{
+  "mappings": {
+
+    "article" : {
+  	"_all": {
+		"enabled": true
+	},
+
+  	"_id" : {
+		"path": "matrix_asset_id",
+		"index": "not_analyzed",
+		"store": true
+	},
+	"_source" : { "enabled": false },
+	"_all" : { "enabled": true },
+
+	"dynamic": "false",
+
+	"properties" : {
+		"extras": {
+		  "properties" : {
+		  	"tags_string": {
+				"type" : "string",
+				"index" : "not_analyzed",
+				"store": true
+			},
+			"thumbnail_url": {
+				"type": "string",
+				"include_in_all" : false,
+				"index" : "not_analyzed",
+				"store": true
+			}
+		  }
+		},
+		"fields": {
+		  "properties": {
+		  	"description": {
+				"type": "string",
+				"store": true
+			},
+			"title": {
+				"type" : "string",
+				"fields": {
+ 			                "suggest": {
+                       			  "type": "completion",
+ 			                   "index_analyzer": "simple",
+ 			                   "search_analyzer": "simple",
+ 			                   "payloads": true 
+				  	}
+				},
+				"store": true
+			},
+			"url": {
+				"type": "string",
+				"include_in_all" : false,
+				"index" : "not_analyzed",
+				"store": true
+			},
+
+			"matrix_asset_id": {
+				"type": "long",
+				"include_in_all" : false,
+				"store": false
+			},
+			"page": {
+			    "properties": {
+			       "fields": {
+			         "properties": {
+				   "content": {
+				   	"type": "string",
+					"store": true
+				   },
+				   "date_inserted": {
+					"include_in_all" : false,
+				   	"type": "date",
+					"format": "YYYY-MM-dd HH:mm:ss",
+					"store": true
+				   }
+				 }
+			       }
+			     }
+			   }
+		 	}
+		}
+	}
+    },
+    "subject" : {
+  	"_all": {
+		"enabled": true
+	},
+
+  	"_id" : {
+		"path": "matrix_asset_id",
+		"index": "not_analyzed",
+		"store": true
+	},
+	"_source" : { "enabled": false },
+	"_all" : { "enabled": true },
+
+
+	"dynamic": "false",
+
+	"properties" : {
+		"extras": {
+		  "properties" : {
+		  	"tags_string": {
+				"type" : "string",
+				"index" : "not_analyzed",
+				"store": true
+			},
+			"thumbnail_url": {
+				"type": "string",
+				"include_in_all" : false,
+				"index" : "not_analyzed",
+				"store": true
+			}
+		  }
+		},
+
+		"fields": {
+		  "properties": {
+		  	"description": {
+				"type": "string",
+				"store": true
+			},
+			"title": {
+				"type" : "string",
+				"fields": {
+ 			                "suggest": {
+                       			  "type": "completion",
+ 			                   "index_analyzer": "simple",
+ 			                   "search_analyzer": "simple",
+ 			                   "payloads": true
+				  	}
+				},
+				"store": true
+			},
+			"url": {
+				"type": "string",
+				"include_in_all" : false,
+				"index" : "not_analyzed",
+				"store": true
+			},
+
+			"matrix_asset_id": {
+				"type": "long",
+				"include_in_all" : false,
+				"store": false
+			},
+			"page": {
+			    "properties": {
+			       "fields": {
+			         "properties": {
+				   "content": {
+				   	"type": "string",
+					"store": true
+				   },
+				   "date_inserted": {
+					"include_in_all" : false,
+				   	"type": "date",
+					"format": "YYYY-MM-dd HH:mm:ss",
+					"store": true
+				   }
+				 }
+			       }
+			     }
+			   }
+		 	}
+		}
+	}
+    },
+    "news" : {
+  	"_all": {
+		"enabled": true
+	},
+
+  	"_id" : {
+		"path": "matrix_asset_id",
+		"index": "not_analyzed",
+		"store": true
+	},
+	"_source" : { "enabled": false },
+	"_all" : { "enabled": true },
+
+	"dynamic": "false",
+
+	"properties" : {
+		"extras": {
+		  "properties" : {
+		  	"tags_string": {
+				"type" : "string",
+				"index" : "not_analyzed",
+				"store": true
+			},
+			"thumbnail_url": {
+				"type": "string",
+				"include_in_all" : false,
+				"index" : "not_analyzed",
+				"store": true
+			}
+		  }
+		},
+
+		"fields": {
+		  "properties": {
+		  	"description": {
+				"type": "string",
+				"store": true
+			},
+			"title": {
+				"type" : "string",
+				"fields": {
+ 			                "suggest": {
+                       			  "type": "completion",
+ 			                   "index_analyzer": "simple",
+ 			                   "search_analyzer": "simple",
+ 			                   "payloads": true
+				  	}
+				},
+				"store": true
+			},
+			"url": {
+				"type": "string",
+				"include_in_all" : false,
+				"index" : "not_analyzed",
+				"store": true
+			},
+
+			"matrix_asset_id": {
+				"type": "long",
+				"include_in_all" : false,
+				"store": false
+			},
+			"page": {
+			    "properties": {
+			       "fields": {
+			         "properties": {
+				   "content": {
+				   	"type": "string",
+					"store": true
+				   },
+				   "date_inserted": {
+					"include_in_all" : false,
+				   	"type": "date",
+					"format": "YYYY-MM-dd HH:mm:ss",
+					"store": true
+				   }
+				 }
+			       }
+			     }
+			   }
+		 	}
+		}
+	}
+    },
+    "event" : {
+  	"_all": {
+		"enabled": true
+	},
+
+  	"_id" : {
+		"path": "matrix_asset_id",
+		"index": "not_analyzed",
+		"store": true
+	},
+	"_source" : { "enabled": false },
+	"_all" : { "enabled": true },
+
+	"dynamic": "false",
+
+	"properties" : {
+		"extras": {
+		  "properties" : {
+		  	"tags_string": {
+				"type" : "string",
+				"index" : "not_analyzed",
+				"store": true
+			},
+			"thumbnail_url": {
+				"type": "string",
+				"include_in_all" : false,
+				"index" : "not_analyzed",
+				"store": true
+			}
+		  }
+		},
+
+		"fields": {
+		  "properties": {
+		  	"description": {
+				"type": "string",
+				"store": true
+			},
+			"title": {
+				"type" : "string",
+				"fields": {
+ 			                "suggest": {
+                       			  "type": "completion",
+ 			                   "index_analyzer": "simple",
+ 			                   "search_analyzer": "simple",
+ 			                   "payloads": true
+				  	}
+				},
+				"store": true
+			},
+			"url": {
+				"type": "string",
+				"include_in_all" : false,
+				"index" : "not_analyzed",
+				"store": true
+			},
+
+			"matrix_asset_id": {
+				"type": "long",
+				"include_in_all" : false,
+				"store": false
+			},
+			"page": {
+			    "properties": {
+			       "fields": {
+			         "properties": {
+				   "content": {
+				   	"type": "string",
+					"store": true
+				   },
+				   "date_inserted": {
+					"include_in_all" : false,
+				   	"type": "date",
+					"format": "YYYY-MM-dd HH:mm:ss",
+					"store": true
+				   }
+				 }
+			       }
+			     }
+			   }
+		 	}
+		}
+	}
+    }
+  }
+}
